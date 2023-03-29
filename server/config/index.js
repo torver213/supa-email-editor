@@ -2,6 +2,8 @@ module.exports = {
     port: parseInt(process.env.PORT, 10) || 5000,
 
     host: process.env.NODE_ENV === 'production' ? 'localhost' : 'localhost',
+
+    bucketName: process.env.GOOGLE_STORAGE_BUCKET_NAME,
     
     mongo: {
         mongodb_uri: process.env.NODE_ENV === "production" ? process.env.MONGO_DB_REMOTE_URL: process.env.MONGO_DB_LOCAL_URL
